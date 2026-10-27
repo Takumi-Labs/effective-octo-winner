@@ -1,10 +1,286 @@
+:root {
+  --color-green-200:  hsl(168.9, 48.3%, 53.7%);
+  --color-green-500:  hsl(171, 66%, 44%);
+  --color-green-700: hsl(166.4, 56.1%, 33.9%);
+  --color-blue-100: hsl(233, 100%, 69%);
+  --color-blue-200: hsl(233, 100%, 69%);
+  --color-blue-700: hsl(237.1, 50%, 51.4%);
+  --color-gray-200: hsl(210, 9.5%, 32.9%);
+  --color-gray-700: hsl(210, 10%, 33%);
+  --color-gray-500: hsl(201, 11%, 66%);
+}
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-style: normal;
+  text-align: center;
+  font-size: 18px;
+}
+
+header {
+  background-image: url("images/bg-header-mobile.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 7rem 1.5rem;
+}
+
+section {
+  padding: 0 1.5rem 7rem;
+}
+
+.header-img-container {
+  width: 6.5rem;
+  height: 6.5rem;
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-gray-700);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.2rem;
+}
+
+header p {
+  margin-bottom: 2.5rem;
+}
+
+.button-container {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 1.2rem;
+  color: white;
+  letter-spacing: 0.03rem;
+  min-width: fit-content;
+}
+
+.primary {
+  background-color: var(--color-green-500);
+  box-shadow: 0px 3px var(--color-green-700);
+}
+
+.secondary {
+  background-color: var(--color-blue-100);
+  box-shadow: 0px 3px var(--color-blue-700);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--color-gray-500);
+  font-size: 0.875rem;  
+}
+
+section h2 {
+  margin-bottom: 1.2rem;
+}
+
+section p {
+  margin-bottom: 3.2rem;
+}
+
+.features {
+  padding: 3.2rem 0.5rem 0;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool div {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 1.8rem;
+}
+
+.tool h4 {
+  margin-bottom: 1.2rem;
+}
+
+.partners-grid {
+  display: grid;
+  place-items: center;
+  gap: 2.75rem;
+  margin-top: 3rem;
+}
+
+.partners-grid img {
+  transform: scale(0.7);
+}
+
+.third p {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+footer {
+  background-color: hsl(195, 18.2%, 95.7%);
+  padding-top: 4rem;
+  padding-bottom: 0.75rem;
+}
+
+.footer-grid {
+  display: grid;
+  place-items: center;
+}
+
+.footer-logo-container {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 2.75rem;
+}
+
+footer p {
+  color: var(--color-gray-700);
+  margin-bottom: 1.75rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.social-icons div {
+  width: 32px;
+  height: 32px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-gray-500);
+}
+
+.primary:hover {
+  background-color: var(--color-green-200);
+}
+
+footer a:hover {
+  color: var(--color-green-200);
+}
+
+.social-icons svg {
+  color: var(--color-gray-200);
+}
+
+.social-icons svg:hover {
+  color: var(--color-green-200);
+}
 
 .attribution { 
-  font-size: 0.6875rem;
+  font-size: 0.6rem;
   text-align: center; 
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .first-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    text-align: left;
+  }
+
+  .computer-container {
+    margin-left: -3.5rem;
+  }
+
+  .second div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .desktop-text {
+    width: 47%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .partners-grid img {
+    transform: scale(1);
+  }
+
+  .third p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button-container {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: flex-start;
+    padding: 0 6rem;
+  }
+
 }
