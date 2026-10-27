@@ -3,7 +3,7 @@
   --color-green-500:  hsl(171, 66%, 44%);
   --color-green-700: hsl(166.4, 56.1%, 33.9%);
   --color-blue-100: hsl(233, 100%, 69%);
-  --color-blue-200: hsl(233, 100%, 69%);
+  --color-blue-200: hsl(235.3, 100%, 72.7%);
   --color-blue-700: hsl(237.1, 50%, 51.4%);
   --color-gray-200: hsl(210, 9.5%, 32.9%);
   --color-gray-700: hsl(210, 10%, 33%);
@@ -196,6 +196,10 @@ footer a {
   background-color: var(--color-green-200);
 }
 
+.secondary:hover {
+  background-color: var(--color-blue-200);
+}
+
 footer a:hover {
   color: var(--color-green-200);
 }
@@ -281,6 +285,7 @@ footer a:hover {
     grid-template-rows: 1fr;
     place-items: flex-start;
     padding: 0 6rem;
+    text-align: left;
   }
 
 }
